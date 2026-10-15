@@ -29,10 +29,8 @@ skipHomepageUpdate: true
 skipPoweredByReadme: true
 
 status-website:
-  # Served at https://eyalsec.github.io/status until status.eyalsec.com points
-  # at GitHub Pages. Switching over replaces the baseUrl line with
-  # `cname: status.eyalsec.com` (see the open "Serve at status.eyalsec.com" PR).
-  baseUrl: /status
+  # Needs DNS: status.eyalsec.com CNAME eyalsec.github.io
+  cname: status.eyalsec.com
   name: EyalSec status
   logoUrl: https://raw.githubusercontent.com/EyalSec/status/master/assets/eyalsec-shield.png
   logoHref: https://eyalsec.com
