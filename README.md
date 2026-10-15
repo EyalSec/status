@@ -5,6 +5,7 @@
 [![Graphs CI](https://github.com/EyalSec/status/workflows/Graphs%20CI/badge.svg)](https://github.com/EyalSec/status/actions/workflows/graphs.yml)
 [![Static Site CI](https://github.com/EyalSec/status/workflows/Static%20Site%20CI/badge.svg)](https://github.com/EyalSec/status/actions/workflows/site.yml)
 [![Summary CI](https://github.com/EyalSec/status/workflows/Summary%20CI/badge.svg)](https://github.com/EyalSec/status/actions/workflows/summary.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/EyalSec/status/badge)](https://scorecard.dev/viewer/?uri=github.com/EyalSec/status)
 
 If something in EyalSec is not working for you, this page tells you within
 about five minutes whether the problem is on our side. It shows the live state
