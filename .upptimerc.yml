@@ -1,31 +1,68 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# EyalSec status: https://github.com/EyalSec/status
+# Configuration reference: https://upptime.js.org/docs/configuration
+owner: EyalSec
+repo: status
+user-agent: eyal-gabay
 
+# Every check is a plain GET from GitHub's hosted runners, every five minutes.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website
+    url: https://eyalsec.com
+  - name: Dashboard and API
+    url: https://eyalsec.com/healthz
+    __dangerous__body_down_if_text_missing: "ok"
+  - name: Documentation
+    url: https://eyalsec.com/docs
+
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  responseTime: "0 23 * * *"
+  graphs: "0 0 * * *"
+  summary: "0 0 * * *"
+  staticSite: "0 1 * * *"
+  updateTemplate: "0 0 * * *"
+  updates: "0 3 * * *"
+
+skipDescriptionUpdate: true
+skipTopicsUpdate: true
+skipHomepageUpdate: true
+skipPoweredByReadme: true
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Served at https://eyalsec.github.io/status until status.eyalsec.com points
+  # at GitHub Pages. Switching over replaces the baseUrl line with
+  # `cname: status.eyalsec.com` (see the open "Serve at status.eyalsec.com" PR).
+  baseUrl: /status
+  name: EyalSec status
+  logoUrl: https://raw.githubusercontent.com/EyalSec/status/master/assets/eyalsec-shield.png
+  logoHref: https://eyalsec.com
+  favicon: https://raw.githubusercontent.com/EyalSec/status/master/assets/eyalsec-icon-192.png
+  introTitle: "Live availability of the EyalSec website, dashboard and docs."
+  introMessage: "Each service is checked every five minutes. When a check fails, an incident opens here on its own and closes when the service answers again. If something looks wrong on your side, write to support@eyalsec.com and we will look into it with you."
   navbar:
     - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: ./
+    - title: eyalsec.com
+      href: https://eyalsec.com
+    - title: Book a live demo
+      href: https://eyalsec.com/contact
+  metaTags:
+    - name: description
+      content: "Live availability of the EyalSec website, dashboard, API and docs, checked every five minutes."
+  theme: dark
+  css: >-
+    :root:root{--body-background-color:#111310;--body-text-color:#f2f1ea;--card-background-color:#181a15;--nav-background-color:#14160f;--nav-border-bottom-color:#2a2c27;--nav-current-border-bottom-color:#e8b04b;--card-border-color:#2a2c27;--down-border-left-color:#d64545;--down-background-color:#3a1717;--degraded-border-left-color:#e8b04b;--up-border-left-color:#8bbf6b;--tag-color:#111310;--tag-up-background-color:#8bbf6b;--tag-down-background-color:#d64545;--tag-degraded-background-color:#e8b04b;--change-background-color:#e8b04b;--error-button-border-color:#c9a15e;--error-button-background-color:#e8b04b;--error-button-color:#111310;--submit-button-border-color:#c9a15e;--submit-button-background-color:#e8b04b;--submit-button-color:#111310;--graph-opacity:1;--graph-filter:none}
+    body{background:#111310;color:#b6b8ad}
+    h1,h2,h4,nav .logo div{color:#f2f1ea}
+    h1 strong,h2 strong{color:#e8b04b;font-weight:600}
+    a:focus-visible{outline:2px solid #e8b04b;outline-offset:2px}
+    @media (max-width:480px){.container{padding:0 1rem}}
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  allSystemsOperational: "All systems operational"
+  degradedPerformance: "Degraded performance"
+  partialOutage: "Partial outage"
+  completeOutage: "Complete outage"
+  up: "Up"
+  down: "Down"
+  degraded: "Degraded"

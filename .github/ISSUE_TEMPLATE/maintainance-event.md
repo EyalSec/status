@@ -1,17 +1,16 @@
 ---
 name: Maintenance Event
-about: Schedule a work window
-title: "[Scheduled Maintenance] Site down for Maintenance"
+about: Schedule a maintenance window (EyalSec team)
+title: "[Scheduled Maintenance] "
 labels: maintenance
 assignees: ''
 
 ---
 
 <!--
-start: 2021-08-24T13:00:00.220Z
-end: 2021-08-24T14:00:00.220Z
-expectedDown: google, hacker-news
+start: 2026-01-01T13:00:00.000Z
+end: 2026-01-01T14:00:00.000Z
+expectedDown: website, dashboard-and-api, documentation
 -->
 
-**Additional context**
-Who/what/when/where/why is this maintenance happening
+What is changing, which services are affected and what customers should expect during the window.
