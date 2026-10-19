@@ -1,4 +1,4 @@
-# [EyalSec status](https://eyalsec.github.io/status/): <!--live status--> **All systems operational**
+# [EyalSec status](https://status.eyalsec.com): <!--live status--> **All systems operational**
 
 [![Uptime CI](https://github.com/EyalSec/status/workflows/Uptime%20CI/badge.svg)](https://github.com/EyalSec/status/actions/workflows/uptime.yml)
 [![Response Time CI](https://github.com/EyalSec/status/workflows/Response%20Time%20CI/badge.svg)](https://github.com/EyalSec/status/actions/workflows/response-time.yml)
@@ -12,7 +12,7 @@ about five minutes whether the problem is on our side. It shows the live state
 of the website, the dashboard and API, and the documentation, with response
 times and the history of every incident.
 
-- **Status page:** https://eyalsec.github.io/status/
+- **Status page:** https://status.eyalsec.com
 - **Help with your account or a machine:** support@eyalsec.com
 - **Security reports:** security@eyalsec.com
 
